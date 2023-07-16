@@ -1,6 +1,6 @@
-package com.filyago.demo.repository;
+package com.frz.filyago.repository;
 
-import com.filyago.demo.model.Tailor;
+import com.frz.filyago.model.Tailor;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;

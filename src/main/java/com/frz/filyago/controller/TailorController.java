@@ -1,9 +1,9 @@
-package com.filyago.demo.controller;
+package com.frz.filyago.controller;
 
-import com.filyago.demo.dto.TailorDTO;
-import com.filyago.demo.model.Tailor;
-import com.filyago.demo.repository.TailorRepository;
-import com.filyago.demo.service.TailorService;
+import com.frz.filyago.dto.TailorDTO;
+import com.frz.filyago.model.Tailor;
+import com.frz.filyago.repository.TailorRepository;
+import com.frz.filyago.service.TailorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;

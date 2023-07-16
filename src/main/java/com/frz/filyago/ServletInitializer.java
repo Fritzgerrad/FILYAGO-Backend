@@ -1,4 +1,4 @@
-package com.filyago.demo;
+package com.frz.filyago;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

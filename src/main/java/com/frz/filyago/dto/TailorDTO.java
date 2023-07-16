@@ -1,6 +1,4 @@
-package com.filyago.demo.dto;
-
-import com.filyago.demo.model.Tailor;
+package com.frz.filyago.dto;
 
 import java.util.Date;
 import java.util.Random;

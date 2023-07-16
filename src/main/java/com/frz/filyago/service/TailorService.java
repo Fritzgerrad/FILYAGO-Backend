@@ -1,7 +1,7 @@
-package com.filyago.demo.service;
+package com.frz.filyago.service;
 
-import com.filyago.demo.model.Tailor;
-import com.filyago.demo.repository.TailorRepository;
+import com.frz.filyago.model.Tailor;
+import com.frz.filyago.repository.TailorRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
