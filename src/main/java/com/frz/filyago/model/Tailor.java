@@ -1,24 +1,27 @@
 package com.frz.filyago.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.frz.filyago.dto.TailorDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
-@Getter
-@Setter
+@Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "tailors")
 public class Tailor implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(updatable = false)
     private long id;
     private String firstname;
@@ -35,15 +38,25 @@ public class Tailor implements Serializable {
     private String nationality;
     private int noOfClothsSewn;
     private String address;
-    private double rating;
 
+    private String style;
+    private double rating;
     private String activation_code;
     @Column(length = 11)
     private String phone;
     @Column(length = 10)
     private String account_number;
+    private String Bank;
+    private String account_name;
     private Date created_at;
+    @OneToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @JsonManagedReference
+    private User user;
 
+    @OneToMany
+    @JsonBackReference
+    private Set<Clothing> clothes;
 
 
     public static Tailor CREATE(TailorDTO tailorDTO){
