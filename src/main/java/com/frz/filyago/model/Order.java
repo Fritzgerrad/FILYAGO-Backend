@@ -1,7 +1,7 @@
 package com.frz.filyago.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.frz.filyago.utils.Location;
+import com.frz.filyago.utils.Address;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,8 +23,7 @@ public class Order {
     private String sourceAddress;
     private String destinationAddress;
     private String content;
-    @Transient
-    private Location location;
+    private String address;
     @ManyToOne
     @JoinColumn(name = "courier_id",referencedColumnName = "id")
     @JsonManagedReference

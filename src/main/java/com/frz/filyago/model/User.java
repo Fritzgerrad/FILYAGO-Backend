@@ -18,13 +18,14 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name="user")
+@Table(name="users")
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String firstname;
     private String lastname;
+
     @Column(unique = true)
     private String email;
     private String gender;

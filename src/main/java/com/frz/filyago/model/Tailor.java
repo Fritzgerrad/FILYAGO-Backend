@@ -38,7 +38,6 @@ public class Tailor implements Serializable {
     private String nationality;
     private int noOfClothsSewn;
     private String address;
-
     private String style;
     private double rating;
     private String activation_code;
